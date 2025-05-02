@@ -1,7 +1,10 @@
-import { Field, InputType } from '@nestjs/graphql';
+import { Field, ObjectType } from '@nestjs/graphql';
 
-@InputType()
-export class SignUpByEmailInput {
+@ObjectType()
+export class Author {
+  @Field(() => String)
+  id: string;
+
   @Field(() => String)
   email: string;
 
